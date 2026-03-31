@@ -343,7 +343,7 @@ export default function Portfolio() {
                   <SectionHead label="CONTACT" title="Get In Touch" />
                   <p style={{ color:'rgba(0,0,0,0.5)', marginBottom:'2.5rem' }}>Have a project idea or just want to connect?</p>
                   <div style={{ display:'flex', gap:'1rem', justifyContent:'center' }}>
-                    <a href="mailto:omkanase01@gmail.com" className="cyber-btn cyber-btn-solid">Email Me</a>
+                    <a href="mailto:projectcertificate01@gmail.com" className="cyber-btn cyber-btn-solid">Email Me</a>
                     <a href="https://github.com/hcoona01" target="_blank" rel="noopener noreferrer" className="cyber-btn">GitHub</a>
                   </div>
                 </div>
