@@ -12,10 +12,12 @@ body {
   /* ── THEME: ANTIQUE CYBER-MANUSCRIPT ── */
   background-color: #f2e8d5; 
   background-image: 
-    radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.15) 100%), /* Subtle Vignette */
+    radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.15) 100%), /* Architectural Vignette */
     url("/parchment.png");
   background-attachment: fixed;
-  background-size: 800px auto; /* Tiling for detail */
+  background-size: cover; /* Eliminate seams by stretching to full width */
+  background-position: center;
+  background-repeat: no-repeat;
   color: #1b1b1b; /* Carbon Ink */
   font-family: var(--font-inter), 'Inter', sans-serif;
   overflow-x: hidden;
@@ -168,10 +170,17 @@ body::after {
   content:'';position:absolute;inset:0;
   background: #1b1b1b;
   transform:translateX(-100%);transition:transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
 }
 .cyber-btn:hover::before { transform:translateX(0); }
-.cyber-btn:hover { color:#f2e8d5; border-color:#1b1b1b; }
-.cyber-btn-solid { background:rgba(0,0,0,0.05); border-color:#1b1b1b; }
+.cyber-btn:hover { 
+  color: #f2e8d5 !important;
+  border-color: #1b1b1b;
+  box-shadow: 0 8px 24px rgba(140,110,80,0.15);
+  transform: translateY(-2px);
+}
+.cyber-btn-solid { background: rgba(0,0,0,0.05); border-color:#1b1b1b; }
+.cyber-btn-solid:hover { background: #1b1b1b; }
 
 /* ── SKILL BAR ───────────────────────────────── */
 .skill-bar-track { height:5px; background:rgba(0,0,0,0.08); border-radius:30px; overflow:hidden; }

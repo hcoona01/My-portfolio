@@ -105,7 +105,7 @@ function SkillBar({ name, pct, delay }: { name:string; pct:number; delay:number 
   return (
     <motion.div ref={ref} variants={fadeUp} custom={delay} style={{ marginBottom:'1.25rem' }}>
       <div style={{ display:'flex', justifyContent:'space-between', marginBottom:'0.4rem' }}>
-        <span className="space-mono" style={{ fontSize:'0.72rem', color:'#ccc', letterSpacing:'0.05em' }}>{name}</span>
+        <span className="space-mono" style={{ fontSize:'0.72rem', color:'#1b1b1b', fontWeight:700, letterSpacing:'0.05em' }}>{name}</span>
         <span className="space-mono" style={{ fontSize:'0.65rem', color:'rgba(176,38,255,0.7)' }}>{pct}%</span>
       </div>
       <div className="skill-bar-track">
@@ -254,7 +254,7 @@ export default function Portfolio() {
           {/* ABOUT */}
           <SectionWrap id="about">
             <Container>
-              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'4rem', alignItems:'center' }}>
+              <div style={{ display:'grid', gridTemplateColumns:'1.2fr 0.8fr', gap:'5rem', alignItems:'center' }}>
                 <div>
                   <SectionHead label="ABOUT_ME" title="About" />
                   <p style={{ color:'rgba(0,0,0,0.65)', lineHeight:1.85, fontSize:'0.95rem', marginBottom:'1.5rem' }}>
@@ -350,7 +350,7 @@ export default function Portfolio() {
             </Container>
           </SectionWrap>
 
-          <footer style={{ padding:'4rem 48px', textAlign:'center', fontSize:'0.65rem', color:'rgba(0,0,0,0.25)' }}>
+          <footer style={{ padding:'4rem 48px', textAlign:'center', fontSize:'0.65rem', color:'#1b1b1b', opacity:0.6 }}>
             OM DIPAK KANASE · PORTFOLIO v2.5 · 2025
           </footer>
         </div>
