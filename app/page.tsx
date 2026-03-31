@@ -231,7 +231,7 @@ export default function Portfolio() {
                 </p>
                 <div style={{ display:'flex', gap:'1rem', flexWrap:'wrap' }}>
                   <a href="#projects" className="cyber-btn cyber-btn-solid">View Projects</a>
-                  <a href="mailto:omkanase01@gmail.com" className="cyber-btn">Contact Me</a>
+                  <a href="mailto:projectcertificate01@gmail.com" className="cyber-btn">Contact Me</a>
                 </div>
               </div>
               <motion.div initial={{ opacity:0, x:80 }} animate={{ opacity:1, x:0 }} transition={{ delay:3.3, duration:1 }}>
