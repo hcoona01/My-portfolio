@@ -50,9 +50,9 @@ export default function Preloader({ children }: Props) {
           >
             {/* Grid + ambient */}
             <div className="preloader-grid" style={{ 
-              backgroundImage: 'linear-gradient(rgba(123, 47, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(123, 47, 255, 0.08) 1px, transparent 1px)' 
+              backgroundImage: 'linear-gradient(rgba(140, 110, 80, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(140, 110, 80, 0.05) 1px, transparent 1px)' 
             }} />
-            <div style={{ position:'absolute',inset:0,background:'radial-gradient(ellipse 50% 60% at 50% 50%, rgba(123,73,255,0.1) 0%, transparent 70%)',pointerEvents:'none' }} />
+            <div style={{ position:'absolute',inset:0,background:'radial-gradient(ellipse 50% 60% at 50% 50%, rgba(140,110,80,0.04) 0%, transparent 70%)',pointerEvents:'none' }} />
 
             {/* Corners */}
             <div className="corner-tl" /><div className="corner-tr" />
@@ -72,17 +72,17 @@ export default function Preloader({ children }: Props) {
               <div className="hex-ring hex-ring-1" />
               <div className="hex-ring hex-ring-2" />
               <div className="hex-ring hex-ring-3" />
-              <div className="preloader-percent" style={{ color: '#b026ff', textShadow: '0 0 20px rgba(176, 38, 255, 0.6)' }}>
-                {pct}<span style={{ fontSize:'0.65em', opacity:0.55 }}>%</span>
+              <div className="preloader-percent" style={{ color: '#b026ff' }}>
+                {pct}<span style={{ fontSize:'0.65em', opacity:0.4 }}>%</span>
               </div>
             </div>
 
             {/* Name */}
             <div style={{ textAlign:'center',marginTop:28 }}>
-              <div className="orbitron" style={{ fontSize:'1.05rem',fontWeight:700,letterSpacing:'0.3em',color:'#e0e0ee',textTransform:'uppercase' }}>
+              <div className="orbitron" style={{ fontSize:'1.05rem',fontWeight:700,letterSpacing:'0.3em',color:'#050510',textTransform:'uppercase' }}>
                 Om Dipak Kanase
               </div>
-              <div className="space-mono" style={{ fontSize:'0.6rem',letterSpacing:'0.25em',color:'rgba(176,38,255,0.55)',marginTop:6 }}>
+              <div className="space-mono" style={{ fontSize:'0.6rem',letterSpacing:'0.25em',color:'#7b2fff',marginTop:6 }}>
                 PORTFOLIO SYSTEM // BOOT SEQUENCE
               </div>
             </div>
@@ -97,9 +97,9 @@ export default function Preloader({ children }: Props) {
             </div>
 
             {/* Boot messages */}
-            <div style={{ marginTop:16,minHeight:80,fontFamily:'Space Mono,monospace',fontSize:'0.62rem',color:'rgba(123,47,255,0.6)',width:280,textAlign:'left' }}>
+            <div style={{ marginTop:20,minHeight:80,fontFamily:'Space Mono,monospace',fontSize:'0.6rem',color:'rgba(0,0,0,0.5)',width:280,textAlign:'left' }}>
               {BOOT.filter(b => pct >= b.at).map((b, i) => (
-                <p key={i} className="boot-msg" style={{ color: 'rgba(176,38,255,0.7)' }}>{b.msg}</p>
+                <p key={i} className="boot-msg" style={{ color: '#b026ff', fontWeight: 600 }}>{b.msg}</p>
               ))}
             </div>
 

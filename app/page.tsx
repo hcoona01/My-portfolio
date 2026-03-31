@@ -171,20 +171,20 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div ref={rootRef} style={{ background:'#0a071a', minHeight:'100vh', position:'relative' }}>
+    <div ref={rootRef} style={{ background:'transparent', minHeight:'100vh', position:'relative' }}>
         
         {/* BG ACCENTS */}
         <motion.div animate={{ left:['-110%', '110%'], opacity:[0, 1, 1, 0] }}
           transition={{ duration:4.5, repeat:Infinity, repeatDelay:2, ease:'easeInOut' }}
           style={{ position:'fixed', top:'38%', width:'100%', height:1, pointerEvents:'none', zIndex:2,
-            background:'linear-gradient(90deg,transparent,rgba(176,38,255,0.9),rgba(255,255,255,1),rgba(176,38,255,0.9),transparent)',
-            filter:'blur(0.5px)', boxShadow:'0 0 8px rgba(176,38,255,0.6)' }}
+            background:'linear-gradient(90deg,transparent,#1b1b1b,rgba(140,110,80,0.4),#1b1b1b,transparent)',
+            filter:'blur(0.5px)' }}
         />
         <motion.div animate={{ top:['-110%', '110%'], opacity:[0, 1, 1, 0] }}
           transition={{ duration:6, repeat:Infinity, repeatDelay:3, ease:'easeInOut', delay:2 }}
           style={{ position:'fixed', left:'68%', height:'100%', width:1, pointerEvents:'none', zIndex:2,
-            background:'linear-gradient(180deg,transparent,rgba(123,47,255,0.9),rgba(255,255,255,1),rgba(123,47,255,0.9),transparent)',
-            filter:'blur(0.5px)', boxShadow:'0 0 8px rgba(123,47,255,0.6)' }}
+            background:'linear-gradient(180deg,transparent,#8c6e50,rgba(140,110,80,0.3),#8c6e50,transparent)',
+            filter:'blur(0.5px)' }}
         />
 
         {mounted && <CustomCursor />}
@@ -194,16 +194,16 @@ export default function Portfolio() {
           <nav className={`cyber-nav ${scrolled?'scrolled':''}`}>
             <motion.button initial={{ opacity:0, x:-20 }} animate={{ opacity:1, x:0 }} transition={{ delay:3.2, duration:0.6 }}
               className="orbitron" onClick={() => window.scrollTo({ top:0, behavior:'smooth' })}
-              style={{ background:'none', border:'none', cursor:'none', fontSize:'0.88rem', fontWeight:700, letterSpacing:'0.2em', color:'#e0e0ee' }}
+              style={{ background:'none', border:'none', cursor:'none', fontSize:'0.88rem', fontWeight:700, letterSpacing:'0.2em', color:'#050510' }}
             >
               ODK<span style={{ color:'#b026ff' }}>.</span>
             </motion.button>
             <div style={{ display:'flex', gap:'2rem', alignItems:'center' }}>
               {NAV.map(n => (
                 <a key={n} href={`#${n}`} className="space-mono"
-                  style={{ fontSize:'0.62rem', letterSpacing:'0.15em', textTransform:'uppercase', color:'rgba(204,204,220,0.55)', textDecoration:'none', transition:'color 0.2s' }}
+                  style={{ fontSize:'0.62rem', letterSpacing:'0.15em', textTransform:'uppercase', color:'rgba(0,0,0,0.5)', textDecoration:'none', transition:'color 0.2s' }}
                   onMouseEnter={e => { (e.target as HTMLElement).style.color='#b026ff'; }}
-                  onMouseLeave={e => { (e.target as HTMLElement).style.color='rgba(204,204,220,0.55)'; }}
+                  onMouseLeave={e => { (e.target as HTMLElement).style.color='rgba(0,0,0,0.5)'; }}
                 >{n}</a>
               ))}
             </div>
@@ -214,19 +214,19 @@ export default function Portfolio() {
             <motion.div style={{ position:'absolute', inset:0, y:heroParallax, background:'radial-gradient(ellipse 70% 70% at 60% 50%, rgba(123,47,255,0.09) 0%, transparent 70%)', pointerEvents:'none' }} />
             <div style={{ maxWidth:1180, margin:'0 auto', padding:'0 48px', display:'grid', gridTemplateColumns:'1fr 1fr', alignItems:'center', gap:'3rem', width:'100%' }}>
               <div>
-                <div className="space-mono" style={{ fontSize:'0.65rem', letterSpacing:'0.3em', color:'rgba(176,38,255,0.7)', marginBottom:'1.2rem', display:'flex', alignItems:'center', gap:8 }}>
+                <div className="space-mono" style={{ fontSize:'0.65rem', letterSpacing:'0.3em', color:'#7b2fff', marginBottom:'1.2rem', display:'flex', alignItems:'center', gap:8 }}>
                   <motion.span animate={{ opacity:[0,1,0] }} transition={{ duration:1.2, repeat:Infinity }} style={{ width:6, height:6, borderRadius:'50%', background:'#b026ff' }} />
                   ONLINE // PORTFOLIO v2.5
                 </div>
-                <h1 className="orbitron lustrous" style={{ fontSize:'clamp(2.2rem,4.5vw,4rem)', fontWeight:900, lineHeight:1.12, color:'#f0f0f8', letterSpacing:'0.02em', marginBottom:'0.8rem' }}>
+                <h1 className="orbitron lustrous" style={{ fontSize:'clamp(2.2rem,4.5vw,4rem)', fontWeight:900, lineHeight:1.12, color:'#050510', letterSpacing:'0.02em', marginBottom:'0.8rem' }}>
                   Om Dipak<br />Kanase
                 </h1>
                 <div style={{ display:'flex', alignItems:'center', gap:'0.8rem', marginBottom:'1.2rem' }}>
-                  <span className="space-mono" style={{ fontSize:'1.05rem', color:'#b026ff', letterSpacing:'0.1em' }}>@HCOONA01</span>
-                  <span style={{ width:36, height:1, background:'rgba(176,38,255,0.35)' }} />
-                  <span className="space-mono" style={{ fontSize:'0.65rem', color:'rgba(204,204,220,0.45)', letterSpacing:'0.15em' }}>AI/ML ENGINEER</span>
+                  <span className="space-mono" style={{ fontSize:'1.05rem', color:'#1b1b1b', fontWeight:900, letterSpacing:'0.1em' }}>@HCOONA01</span>
+                  <span style={{ width:36, height:2, background:'#8c6e50' }} />
+                  <span className="space-mono" style={{ fontSize:'0.65rem', color:'rgba(0,0,0,0.55)', letterSpacing:'0.15em' }}>AI/ML ENGINEER</span>
                 </div>
-                <p style={{ fontSize:'0.92rem', color:'rgba(204,204,220,0.65)', lineHeight:1.7, maxWidth:400, marginBottom:'2rem' }}>
+                <p style={{ fontSize:'0.92rem', color:'#1b1b1b', opacity:0.8, lineHeight:1.7, maxWidth:400, marginBottom:'2rem' }}>
                   CSE student at Lovely Professional University specialising in AI & ML. Passionate about building intelligent systems that solve real-world problems.
                 </p>
                 <div style={{ display:'flex', gap:'1rem', flexWrap:'wrap' }}>
@@ -235,7 +235,7 @@ export default function Portfolio() {
                 </div>
               </div>
               <motion.div initial={{ opacity:0, x:80 }} animate={{ opacity:1, x:0 }} transition={{ delay:3.3, duration:1 }}>
-                <div style={{ width:'100%', maxWidth:520, aspectRatio:'1/1', position:'relative', border:'1px solid rgba(176,38,255,0.1)', borderRadius:4, overflow:'hidden', background:'#050510' }}>
+                <div style={{ width:'100%', maxWidth:520, aspectRatio:'1/1', position:'relative', border:'1px solid rgba(140,110,80,0.3)', borderRadius:4, overflow:'hidden', background:'transparent' }}>
                   {/* Seamless Unbranded Iframe — Clipped to remove "Built with Spline" watermark */}
                   <div style={{ width:'100%', height:'calc(100% + 50px)', position:'absolute', top:0, left:0, overflow:'hidden' }}>
                     <iframe 
@@ -257,17 +257,17 @@ export default function Portfolio() {
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'4rem', alignItems:'center' }}>
                 <div>
                   <SectionHead label="ABOUT_ME" title="About" />
-                  <p style={{ color:'rgba(204,204,220,0.7)', lineHeight:1.85, fontSize:'0.95rem', marginBottom:'1.5rem' }}>
+                  <p style={{ color:'rgba(0,0,0,0.65)', lineHeight:1.85, fontSize:'0.95rem', marginBottom:'1.5rem' }}>
                     Detail-oriented Computer Science Engineering student at Lovely Professional University, specialising in Artificial Intelligence and Machine Learning.
                   </p>
-                  <p style={{ color:'rgba(204,204,220,0.7)', lineHeight:1.85, fontSize:'0.95rem' }}>
+                  <p style={{ color:'rgba(0,0,0,0.65)', lineHeight:1.85, fontSize:'0.95rem' }}>
                     Passionate about solving real-world problems through data-driven approaches and continually learning new technologies. Seeking opportunities to apply technical expertise in AI/ML and contribute to impactful projects.
                   </p>
                 </div>
                 <div className="cyber-card" style={{ padding:'2rem' }}>
-                    <div className="space-mono" style={{ fontSize:'0.6rem', color:'rgba(176,38,255,0.5)', marginBottom:'1.25rem' }}>// STATS</div>
+                    <div className="space-mono" style={{ fontSize:'0.6rem', color:'rgba(123,47,255,0.7)', marginBottom:'1.25rem' }}>// STATS</div>
                     { ACHIEVEMENTS.slice(0,4).map((a,i) => (
-                      <div key={i} style={{ padding:'0.75rem 0', borderBottom:'1px solid rgba(255,255,255,0.05)', fontSize:'0.82rem', color:'rgba(204,204,220,0.85)' }}>
+                      <div key={i} style={{ padding:'0.75rem 0', borderBottom:'1px solid rgba(0,0,0,0.03)', fontSize:'0.82rem', color:'rgba(0,0,0,0.85)' }}>
                         {a}
                       </div>
                     ))}
@@ -277,15 +277,15 @@ export default function Portfolio() {
           </SectionWrap>
 
           {/* PROJECTS */}
-          <SectionWrap id="projects" style={{ background:'rgba(10,10,20,0.4)' }}>
+          <SectionWrap id="projects" style={{ background:'rgba(0,0,0,0.02)' }}>
             <Container>
               <SectionHead label="PROJECTS" title="Projects" />
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'1.5rem' }}>
                 {PROJECTS.map((p,i) => (
                   <div key={p.name} className="cyber-card" style={{ padding:'2rem' }}>
-                    <h3 className="orbitron lustrous" style={{ color:'#f0f0f8', marginBottom:'0.5rem' }}>{p.name}</h3>
+                    <h3 className="orbitron lustrous" style={{ color:'#050510', marginBottom:'0.5rem' }}>{p.name}</h3>
                     <p style={{ fontSize:'0.75rem', color:p.accent, marginBottom:'1rem' }}>{p.subtitle}</p>
-                    <ul style={{ listStyle:'none', padding:0, fontSize:'0.82rem', color:'rgba(204,204,220,0.7)', display:'flex', flexDirection:'column', gap:'0.6rem' }}>
+                    <ul style={{ listStyle:'none', padding:0, fontSize:'0.82rem', color:'rgba(0,0,0,0.6)', display:'flex', flexDirection:'column', gap:'0.6rem' }}>
                       {p.points.map((pt,j) => <li key={j}>{pt}</li>)}
                     </ul>
                   </div>
@@ -301,8 +301,8 @@ export default function Portfolio() {
                 <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'4rem' }}>
                 <div> {SKILLS.map((s,i) => <SkillBar key={s.name} name={s.name} pct={s.pct} delay={i} />)} </div>
                 <div className="cyber-card" style={{ padding:'2rem' }}>
-                  <div className="space-mono" style={{ fontSize:'0.6rem', color:'rgba(176,38,255,0.5)', marginBottom:'1rem' }}>// SPECIALISATIONS</div>
-                  {['Artificial Intelligence','Machine Learning','NLP','Data Science'].map(f => <div key={f} style={{ padding:'0.5rem 0', borderBottom:'1px solid rgba(255,255,255,0.04)', color:'rgba(204,204,220,0.85)' }}>{f}</div>)}
+                  <div className="space-mono" style={{ fontSize:'0.6rem', color:'rgba(123,47,255,0.7)', marginBottom:'1rem' }}>// SPECIALISATIONS</div>
+                  {['Artificial Intelligence','Machine Learning','NLP','Data Science'].map(f => <div key={f} style={{ padding:'0.5rem 0', borderBottom:'1px solid rgba(0,0,0,0.02)', color:'rgba(0,0,0,0.85)' }}>{f}</div>)}
                 </div>
               </div>
             </Container>
@@ -314,22 +314,22 @@ export default function Portfolio() {
               <SectionHead label="ACHIEVEMENTS" title="Academic Milestones" />
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'1rem' }}>
                 { ACHIEVEMENTS.map((a,i) => (
-                  <div key={i} className="cyber-card" style={{ padding:'1rem', color:'rgba(204,204,220,0.85)', fontSize:'0.85rem' }}>{a}</div>
+                  <div key={i} className="cyber-card" style={{ padding:'1rem', color:'rgba(0,0,0,0.8)', fontSize:'0.85rem' }}>{a}</div>
                 ))}
               </div>
             </Container>
           </SectionWrap>
 
           {/* EDUCATION */}
-          <SectionWrap id="education" style={{ background:'rgba(10,10,20,0.4)' }}>
+          <SectionWrap id="education" style={{ background:'rgba(0,0,0,0.02)' }}>
             <Container>
               <SectionHead label="EDUCATION" title="Education" />
                 <div style={{ display:'flex', flexDirection:'column', gap:'1.5rem' }}>
                   { EDUCATION.map((e,i) => (
                     <div key={i} className="cyber-card" style={{ padding:'1.5rem' }}>
-                      <h4 className="orbitron" style={{ color:'#fff' }}>{e.deg}</h4>
+                      <h4 className="orbitron" style={{ color:'#050510' }}>{e.deg}</h4>
                       <p style={{ color:'#b026ff', fontSize:'0.85rem' }}>{e.school}</p>
-                      <p style={{ color:'rgba(204,204,220,0.4)', fontSize:'0.7rem' }} className="space-mono">{e.period}</p>
+                      <p style={{ color:'rgba(0,0,0,0.35)', fontSize:'0.7rem' }} className="space-mono">{e.period}</p>
                     </div>
                   ))}
                 </div>
@@ -341,7 +341,7 @@ export default function Portfolio() {
             <Container>
                 <div style={{ textAlign:'center' }}>
                   <SectionHead label="CONTACT" title="Get In Touch" />
-                  <p style={{ color:'rgba(204,204,220,0.6)', marginBottom:'2.5rem' }}>Have a project idea or just want to connect?</p>
+                  <p style={{ color:'rgba(0,0,0,0.5)', marginBottom:'2.5rem' }}>Have a project idea or just want to connect?</p>
                   <div style={{ display:'flex', gap:'1rem', justifyContent:'center' }}>
                     <a href="mailto:omkanase01@gmail.com" className="cyber-btn cyber-btn-solid">Email Me</a>
                     <a href="https://github.com/hcoona01" target="_blank" rel="noopener noreferrer" className="cyber-btn">GitHub</a>
@@ -350,7 +350,7 @@ export default function Portfolio() {
             </Container>
           </SectionWrap>
 
-          <footer style={{ padding:'4rem 48px', textAlign:'center', fontSize:'0.65rem', color:'rgba(204,204,220,0.2)' }}>
+          <footer style={{ padding:'4rem 48px', textAlign:'center', fontSize:'0.65rem', color:'rgba(0,0,0,0.25)' }}>
             OM DIPAK KANASE · PORTFOLIO v2.5 · 2025
           </footer>
         </div>
