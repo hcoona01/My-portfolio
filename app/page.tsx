@@ -7,6 +7,7 @@ import {
 } from 'framer-motion';
 import Lenis from 'lenis';
 import CustomCursor from './components/CustomCursor';
+import FallingLeaves from './components/FallingLeaves';
 
 /* ── DATA ──────────────────────────────────────────────────────────── */
 const NAV = ['about','projects','skills','certifications','achievements','education','contact'];
@@ -188,6 +189,7 @@ export default function Portfolio() {
         />
 
         {mounted && <CustomCursor />}
+        <FallingLeaves />
 
         <div style={{ position:'relative', zIndex:10 }}>
           {/* NAVBAR */}
